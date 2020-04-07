@@ -11,15 +11,15 @@ Responsible/Contact: data_admin@eviso.it
 
 # Rules and Context
 **SIMPLIFIED DESCRIPTION**
-Authorized ENTITIES can submit BIDs to purchase or sell energy in the SPOT MARKET for each of the day 24 hours.
-The fit between all purchase and the selling bids for an hour of a day defines the price for that day.
-The SPOT MARKET is divided into 8 SUB-MARKETS that close and open at different times, creating temporal windows for entities to bid multiple times for the same specific hour of a specific day.
-The Italian market is divided into multiple REGIONS, each with its own 8 SUB-MARKETS.
+- Authorized ENTITIES can submit BIDs to purchase or sell energy in the SPOT MARKET for each of the day 24 hours.
+- The fit between all purchase and the selling bids for an hour of a day defines the price for that day.
+- The SPOT MARKET is divided into 8 SUB-MARKETS that close and open at different times, creating temporal windows for entities to bid multiple times for the same specific hour of a specific day.
+- The Italian market is divided into multiple REGIONS, each with its own 8 SUB-MARKETS.
 
-The SPOT MARKET represents the reservation of energy. No real energy is exchanged here.
-The difference between the real energy produced or consumed by each entity and the energy reserved in SPOT MARKET will be handled by the DISPATCH MARKET that will charge entities for that.
-Both energy producers and consumers make bids in the same SPOT MARKETS.
-A consumer submits mainly purchase bids but can also submit selling bids if their forecast changed and they bought too much energy.
+- The SPOT MARKET represents the reservation of energy. No real energy is exchanged here.
+- The difference between the real energy produced or consumed by each entity and the energy reserved in SPOT MARKET will be handled by the DISPATCH MARKET that will charge entities for that.
+- Both energy producers and consumers make bids in the same SPOT MARKETS.
+- A consumer submits mainly purchase bids but can also submit selling bids if their forecast changed and they bought too much energy.
 
 The goals of each entity in the SPOT market are:**
 1- forecast its energy consumption or production in order to reserve the correct amount in the SPOT MARKET and minimize cost of the difference in the DISPATCH MARKET.
@@ -46,9 +46,9 @@ The total energy cost for that our can be computed by:
 | MI6   |2 MWh (sell)    | 10 €/MWh   | 25 €/MWh       | accepted | 50 €   |
 | DISPATCH   |1 MWh (purchase)    | -    | 60 €/MWh       | accepted | -60 €   |
 
-The total cost for that hour in SPOT MARKET was -610 € =-440-220+50 
-The total energy reserved was 10 MWh = 8+4-2 
-The total cost for that hour, including DISPATCH MARKET was -670 €
+-The total cost for that hour in SPOT MARKET was -610 € =-440-220+50 
+- The total energy reserved was 10 MWh = 8+4-2 
+- The total cost for that hour, including DISPATCH MARKET was -670 €
 
 **RULES FOR EACH BID**
 - submitted for a specific HOUR of a specific DAY

@@ -23,7 +23,7 @@ Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SYS
 - be submitted inside the Start and End time of the used MARKET
 - ENTITIES can submit multiple BIDs for the same HOUR, MARKET, ZONE and PURPOSE.
 
-**ACCEPTANCE OR REFUSAL OF BIDS**
+**1. ACCEPTANCE OR REFUSAL OF BIDS**
 - For each HOUR, MARKET and ZONE, the SYSTEM will intersect the purchase and sell cumulative curves of all ENTITIES.
 - The PRICE of the BIDS at the intersection defined the AWARDED PRICE
 - All purchase BIDS with BID PRICE above the AWARDED PRICE are accepted, others are refused.

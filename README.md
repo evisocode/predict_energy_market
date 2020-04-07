@@ -23,8 +23,8 @@ Responsible/Contact: data_admin@eviso.it
 
 **The goals of each entity in the SPOT market are:**
 
-1- forecast its energy consumption or production in order to reserve the correct amount in the SPOT MARKET and minimize cost of the difference in the DISPATCH MARKET.
-2- reserve the above energy at the best possible price by bidding in any of the 8 SUB-MARKETS in the SPOT MARKET or even transacting previously reserved energy in subsequent SUB-MARKETS.
+1. forecast its energy consumption or production in order to reserve the correct amount in the SPOT MARKET and minimize cost of the difference in the DISPATCH MARKET.
+2. reserve the above energy at the best possible price by bidding in any of the 8 SUB-MARKETS in the SPOT MARKET or even transacting previously reserved energy in subsequent SUB-MARKETS.
 
 
 **EXAMPLES OF A POSSIBLE SET OF BIDS and ITS COST**

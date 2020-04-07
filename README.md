@@ -221,7 +221,8 @@ GOAL:
 * The data can be accessed via direct query.
 * See below and example using PyMySQL
 
-```!apt-get install mysql-server > /dev/null
+```
+!apt-get install mysql-server > /dev/null
 !service mysql start
 !pip -q install PyMySQL
 %load_ext sql
@@ -230,4 +231,5 @@ GOAL:
 %sql mysql+pymysql://colab_energy_market:PASSWORD@HOST:PORT/energy_market
 # query using %sql or %%sql
 df = %sql SELECT * FROM raw_market_data where Mercato = 'MI1' and data > '2020-03-30 00:00:00'
-df```
+df
+```

@@ -13,7 +13,7 @@ Responsible/Contact: data_admin@eviso.it
 
 Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SYSTEM.
 
---- RULES FOR EACH BID
+**RULES FOR EACH BID**
 - submitted for a specific HOUR of a specific DAY
 - include energy QUANTITY (MWh) 
 - include min and max PRICE (€) willing to sell/purchase.
@@ -23,15 +23,13 @@ Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SYS
 - be submitted inside the Start and End time of the used MARKET
 - ENTITIES can submit multiple BIDs for the same HOUR, MARKET, ZONE and PURPOSE.
 
---- ACCEPTANCE OR REFUSAL OF BIDS
-
+**ACCEPTANCE OR REFUSAL OF BIDS**
 - For each HOUR, MARKET and ZONE, the SYSTEM will intersect the purchase and sell cumulative curves of all ENTITIES.
 - The PRICE of the BIDS at the intersection defined the AWARDED PRICE
 - All purchase BIDS with BID PRICE above the AWARDED PRICE are accepted, others are refused.
 - All sell BIDS with BID PRICE bellow the AWARDED PRICE are accepted, others are refused.
 
---- DEFINITIONS OF MARKETS TARGETED IN THIS EXERCISE
-
+**DEFINITIONS OF MARKETS TARGETED IN THIS EXERCISE**
 | Market|      Description  |    Start   |    End     |  Results   |Interval|
 |:-----:|:-----------------:|------------|------------|------------|--------|
 | MPG   |  Day-Ahead        |08:00 of D-9|12:00 of D-1|12:55 of D-1|01 to 24|
@@ -48,7 +46,7 @@ Interval = hours of D in which that specific Market can BID
 More details about MARKETS
 - https://www.mercatoelettrico.org/En/Mercati/MercatoElettrico/MPE.aspx
 
---- DEFINITIONS OF ZONES TARGETED IN THIS EXERCISE
+**DEFINITIONS OF ZONES TARGETED IN THIS EXERCISE**
 
 | **Name** | **Acronym** | **Type of zone** | **Areas included** |
 | --- | --- | --- | --- |
@@ -77,7 +75,7 @@ More details about MARKETS
 More details about ZONES
 - https://www.mercatoelettrico.org/En/Mercati/MercatoElettrico/Zone.aspx
 
---- Data Examples
+**Data Examples**
 
 Example of AWARDED PRICES per MARKET for ZONE = 'NORD' at 19 March 2020
 
@@ -111,11 +109,11 @@ Example of AWARDED PRICES per MARKET for ZONE = 'NORD' at 19 March 2020
 
 # Goals of the exercise
 
---- GOAL 1: MAX & MIN PRICES
+**GOAL 1: MAX & MIN PRICES**
 - For each HOUR, DAY and ZONE, predict the MARKET with lower PRICE 
 - For each HOUR, DAY and ZONE, predict the MARKET with higher PRICE 
 
---- GOAL 2: BEST STRATEGY WITH 1X PURCHASE & 1X SELL 
+**GOAL 2: BEST STRATEGY WITH 1X PURCHASE & 1X SELL**
 
 RULES:
 - For each HOUR, DAY and ZONE, purchase 1MWh in just one MARKET and sell 1MWh at another MARKET.

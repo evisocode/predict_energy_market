@@ -13,7 +13,7 @@ Responsible/Contact: data_admin@eviso.it
 
 Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SYSTEM.
 
-**RULES FOR EACH BID**
+**1. RULES FOR EACH BID**
 - submitted for a specific HOUR of a specific DAY
 - include energy QUANTITY (MWh) 
 - include min and max PRICE (€) willing to sell/purchase.

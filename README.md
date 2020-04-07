@@ -37,6 +37,7 @@ The goals of each entity in the SPOT market are:**
 8.	At 11:45 the consumer receive the result that the bid was accepted because the session price was settled at 25€/MWh, higher than the submitted selling bid price.
 9.	After the 13th day ends, the consumer receives the information that the real consumption the hour number 17 (17:00 to 18:00) of the 13th of May was 11MWh and that the extra 1MWh resulted in a charge in the DISPATCH MARKET at 60 €/MWh.
 The total energy cost for that our can be computed by:
+
 | Market | Bid Quantity | Bid Price | Session Price |  Result  |  Cost | 
 | Market |   MWh        |  €/MWh    |     €/MWh     |          |  €    | 
 |:-----:|:-------------:|-----------|---------------|----------|--------|

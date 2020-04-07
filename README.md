@@ -60,7 +60,7 @@ More details about MARKETS
 
 **DEFINITIONS OF ZONES TARGETED IN THIS EXERCISE**
 
-![zone Maps](https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png)
+![zone Maps](https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png | width=100)
 
 | **Name** | **Acronym** | **Type of zone** | **Areas included** |
 | --- | --- | --- | --- |

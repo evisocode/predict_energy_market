@@ -59,8 +59,8 @@ More details about MARKETS
 - https://www.mercatoelettrico.org/En/Mercati/MercatoElettrico/MPE.aspx
 
 **DEFINITIONS OF ZONES TARGETED IN THIS EXERCISE**
-<img src="https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png" width="100" height="100">
-![zone Maps](https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png | width=100)
+<img src="https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png" width="400" height="400">
+
 
 | **Name** | **Acronym** | **Type of zone** | **Areas included** |
 | --- | --- | --- | --- |

@@ -5,25 +5,41 @@ This page describes an exercise to Optimize Results in Italian Energy Market
 The source data is public and made available via GME
 https://www.mercatoelettrico.org/
 
-This Page, including all Algorithms and Descritpions are Confidential Information, property of Eviso S.R.L. 
+This Page, including all Algorithms and Descriptions are Confidential Information, property of Eviso S.R.L. 
 
 Responsible/Contact: data_admin@eviso.it
 
 # Rules and Context
-
-Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SPOT MARKET.
+**SIMPLIFIED DESCRIPTION**
+Authorized ENTITIES can submit BIDs to purchase or sell energy in the SPOT MARKET for each of the day 24 hours.
+The fit between all purchase and the selling bids for an hour of a day defines the price for that day.
+The SPOT MARKET is divided into 8 SUB-MARKETS that close and open at different times, creating temporal windows for entities to bid multiple times for the same specific hour of a specific day.
+The Italian market is divided into multiple REGIONS, each with its own 8 SUB-MARKETS.
 
 The SPOT MARKET represents the reservation of energy. No real energy is exchanged here.
 The difference between the real energy produced or consumed by each entity and the energy reserved in SPOT MARKET will be handled by the DISPATCH MARKET that will charge entities for that.
+Both energy producers and consumers make bids in the same SPOT MARKETS.
+A consumer submits mainly purchase bids but can also submit selling bids if their forecast changed and they bought too much energy.
 
-The goals of each entity in the SPOT market are:
-1- forescast its energy consumption or production in order to reserve the correct amount in the SPOT MARKET and minimize cost of the differentce in the DISPATCH MARKET.
-2- reserve the above energy energy at the best possible price by bidding in any of the 8 SUB-MARKETS in the SPOT MARKET.
-3- Addionally or buy making a profit of purchase and sellinf
+The goals of each entity in the SPOT market are:**
+1- forecast its energy consumption or production in order to reserve the correct amount in the SPOT MARKET and minimize cost of the difference in the DISPATCH MARKET.
+2- reserve the above energy at the best possible price by bidding in any of the 8 SUB-MARKETS in the SPOT MARKET or even transacting previously reserved energy in subsequent SUB-MARKETS.
 
-**CONSUMERS AND PRODUCERS**
-- Both energy producers and consumers make bids in the same SPOT MARKETS.
-- A consumer submits mainly purchase bids but can also submit selling bids if their forecast changed and they bought too much energy.
+
+**EXAMPLES OF POSSIBLE ACTIONS**
+1.	On 12th May, a consumer forecasts that will consume 12MWh of energy for the next day at hour number 17 (17:00 to 18:00) in the NORD region.
+2.	He bids for those 12MWh in the MGP sub-market that closes on at 12:00 of 12th May with two separate bids: one with 8MWh at price 55€/MWH and a second with 4MWh at 25€/MWh.
+3.	At 12:55 the consumers receive the result that only the fist bid was accepted because it was higher than the price defined by the offer and demand crossing of that session: 50€/MWH. The second bid was rejected because the price was lower than 50€/MWh.
+4.	The consumer than submits a new bid of 4MWH at 35€/MWH for the MI1 sub-market that closes at 15:00 of the 12th May.
+5.	At 15:30 the consumer receive the result that the bid was accepted since the price of the session was settled at 30€/MWh, which was lower than the price of the bid.
+6.	At 08:00 of the 13th May the consumer forecasts a different value of needed energy for the hour number 17 (17:00 to 18:00) for that same day. Now instead of 12MWh, the forecast is 10MWH.
+7.	At that time the MI6 sub-market is open until 11:15 and the consumer submits the bid to sell 2MWH at a price of 15€/MWH.
+8.	At 11:45 the consumer receive the result that the bid was accepted because the session price was settled at 25€/MWh, higher than the submitted selling bid price.
+9.	After the 13th day ends, the consumer receives the information that the real consumption the hour number 17 (17:00 to 18:00) of the 13th of May was 11MWh and that the extra 1MWh resulted in a charge in the DISPATCH MARKET at 60 €/MWh.
+The total energy cost for that our can be computed by:
++ 8 MWh x 50 €/MWh = 440 €
++ 4 MWh x 30 €/MWh = 220 €
+- 2 MWh x 30 €/MWh
 
 **RULES FOR EACH BID**
 - submitted for a specific HOUR of a specific DAY
@@ -41,7 +57,7 @@ The goals of each entity in the SPOT market are:
 - All purchase BIDS with BID PRICE above the AWARDED PRICE are accepted, others are refused.
 - All sell BIDS with BID PRICE bellow the AWARDED PRICE are accepted, others are refused.
 
-**DEFINITIONS OF MARKETS TARGETED IN THIS EXERCISE**
+**DEFINITIONS OF SUB-MARKETS TARGETED IN THIS EXERCISE**
 | Market|      Description  |    Start   |    End     |  Results   |Interval|
 |:-----:|:-----------------:|------------|------------|------------|--------|
 | MPG   |  Day-Ahead        |08:00 of D-9|12:00 of D-1|12:55 of D-1|01 to 24|
@@ -55,12 +71,15 @@ The goals of each entity in the SPOT market are:
 
 Interval = hours of D in which that specific Market can BID
 
-More details about MARKETS
+More details about SUB-MARKETS
 - https://www.mercatoelettrico.org/En/Mercati/MercatoElettrico/MPE.aspx
 
 **DEFINITIONS OF ZONES TARGETED IN THIS EXERCISE**
-<img src="https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png" width="400" height="400">
 
+The energy consumed or produced in each ZONE must be traded in the SPOT market of that specific ZONE. This means every zone has its own 8 SUB-MARKET sessions.
+For PRICE purposes, the zones can share the BIDs and create MEGA ZONES or even a single national ZONE. This behavior is very complex and not in the scope of this study.
+Zone Map
+<img src="https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png" width="400" height="400">
 
 | **Name** | **Acronym** | **Type of zone** | **Areas included** |
 | --- | --- | --- | --- |
@@ -89,7 +108,7 @@ More details about MARKETS
 More details about ZONES
 - https://www.mercatoelettrico.org/En/Mercati/MercatoElettrico/Zone.aspx
 
-**Data Examples**
+**DATA EXAMPLES*
 
 Example of AWARDED PRICES per MARKET for ZONE = 'NORD' at 19 March 2020
 

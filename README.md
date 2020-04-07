@@ -99,20 +99,20 @@ Zone Map
 | Sardegna | SARD | geographical | Sardegna  |
 | Sicilia | SICI | geographical |  Sicilia |
 | Southern Italy | SUD | geographical | Molise, Puglia, Basilicata, Calabria |
-| Rossano | ROSN | pole of limited production |   |
-| Austria | AUST | foreign virtual |   |
-| Corsica | CORS | foreign virtual |   |
-| Corsica AC | COAC | foreign virtual |   |
-| France | FRAN | foreign virtual |   |
-| Greece | GREC | foreign virtual |   |
-| Slovenia | SLOV | foreign virtual |   |
-| Switzerland | SVIZ | foreign virtual |   |
-| Malta | MALT | foreign virtual |   |
-| Montenegro | MONT | foreign virtual |   |
-| France Coupling | XFRA | foreign virtual | interconnection France |
-| Austria Coupling | XAUS | foreign virtual | interconnection Austria |
-| Slovenia Coupling | BSP | foreign virtual | interconnection Slovenia |
-| Switzerland Coupling | XSVI | foreign virtual | interconnection Switzerland |
+| Rossano | ROSN | special |   |
+| Austria | AUST | foreign  |   |
+| Corsica | CORS | foreign  |   |
+| Corsica AC | COAC | foreign  |   |
+| France | FRAN | foreign  |   |
+| Greece | GREC | foreign  |   |
+| Slovenia | SLOV | foreign  |   |
+| Switzerland | SVIZ | foreign  |   |
+| Malta | MALT | foreign  |   |
+| Montenegro | MONT | foreign  |   |
+| France Coupling | XFRA | foreign  | interconnection France |
+| Austria Coupling | XAUS | foreign  | interconnection Austria |
+| Slovenia Coupling | BSP | foreign  | interconnection Slovenia |
+| Switzerland Coupling | XSVI | foreign  | interconnection Switzerland |
 
 
 More details about ZONES
@@ -120,7 +120,7 @@ More details about ZONES
 
 **DATA EXAMPLES**
 
-Example of AWARDED PRICES per MARKET for ZONE = 'NORD' at 19 March 2020
+Example of SESSION PRICES per MARKET for ZONE = 'NORD' at 19 March 2020
 
 | Hour | MGP   | MI1   | MI2   | MI3   | MI4    | MI5   | MI6   | MI7   |
 |:----:|-------|-------|-------|-------|--------|-------|-------|-------|
@@ -163,12 +163,12 @@ RULES:
 - Can be use any MARKETS in any order of PURSCHARE / SELL
 - VALUE = PRICE SELL - PRICE PURCHASE
 - VALUE is defined for each HOUR, DAY and ZONE
-- GOD STRATEGY is the perfect strategy.
-- GOD_RATIO = VALUE of the STRATEGY / VALUE of the GOD STRATEGY 
+- PERFECT STRATEGY is the perfect strategy.
+- STRATEGY_MERIT = VALUE of the STRATEGY / VALUE of the GOD STRATEGY 
 - To rank your Strategies use VALUE and GOD_RATIO
 
 GOAL:
-- Create a strategy that maximizes VALUE over an long period of time (several days)
+- Create a strategy that maximizes VALUE over a long period of time, at least two months but the more the better.
 
 # Raw Data Description
 
@@ -236,26 +236,26 @@ GOAL:
 | TOTITABSP_VENDITE  | FLOAT(20,6)  | 24604,36         |                                                              |
 | TOTITABSP_ACQUISTI | FLOAT(20,6)  | 28047,36         |                                                              |
 | PUN                | DOUBLE(20,6) | 43,36            | PRICE                                                        |
-| NAT                | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| CNOR               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| CSUD               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| NORD               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| SARD               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| SICI               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| SUD                | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| BRNN               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| AUST               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| COAC               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| CORS               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| FOGN               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| FRAN               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| GREC               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| MFTV               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| PRGP               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| ROSN               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| SLOV               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| SVIZ               | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
-| BSP                | FLOAT(20,6)  | 43,36            | AWARDED PRICE (euro) of specific ZONE                        |
+| NAT                | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| CNOR               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| CSUD               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| NORD               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| SARD               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| SICI               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| SUD                | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| BRNN               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| AUST               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| COAC               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| CORS               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| FOGN               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| FRAN               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| GREC               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| MFTV               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| PRGP               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| ROSN               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| SLOV               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| SVIZ               | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
+| BSP                | FLOAT(20,6)  | 43,36            | SESSION PRICE (euro) of specific ZONE                        |
 
 # Access to Server Data
 * Data is hosted in a MySQL Server

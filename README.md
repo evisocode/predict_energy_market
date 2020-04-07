@@ -118,7 +118,7 @@ Zone Map
 More details about ZONES
 - https://www.mercatoelettrico.org/En/Mercati/MercatoElettrico/Zone.aspx
 
-**DATA EXAMPLES*
+**DATA EXAMPLES**
 
 Example of AWARDED PRICES per MARKET for ZONE = 'NORD' at 19 March 2020
 

@@ -21,12 +21,13 @@ Responsible/Contact: data_admin@eviso.it
 - Both energy producers and consumers make bids in the same SPOT MARKETS.
 - A consumer submits mainly purchase bids but can also submit selling bids if their forecast changed and they bought too much energy.
 
-The goals of each entity in the SPOT market are:**
+**The goals of each entity in the SPOT market are:**
+
 1- forecast its energy consumption or production in order to reserve the correct amount in the SPOT MARKET and minimize cost of the difference in the DISPATCH MARKET.
 2- reserve the above energy at the best possible price by bidding in any of the 8 SUB-MARKETS in the SPOT MARKET or even transacting previously reserved energy in subsequent SUB-MARKETS.
 
 
-**EXAMPLES OF POSSIBLE ACTIONS**
+**EXAMPLES OF A POSSIBLE SET OF BIDS and ITS COST**
 1.	On 12th May, a consumer forecasts that will consume 12MWh of energy for the next day at hour number 17 (17:00 to 18:00) in the NORD region.
 2.	He bids for those 12MWh in the MGP sub-market that closes on at 12:00 of 12th May with two separate bids: one with 8MWh at price 55€/MWH and a second with 4MWh at 25€/MWh.
 3.	At 12:55 the consumers receive the result that only the fist bid was accepted because it was higher than the price defined by the offer and demand crossing of that session: 50€/MWH. The second bid was rejected because the price was lower than 50€/MWh.
@@ -46,7 +47,7 @@ The total energy cost for that our can be computed by:
 | MI6   |2 MWh (sell)    | 10 €/MWh   | 25 €/MWh       | accepted | 50 €   |
 | DISPATCH   |1 MWh (purchase)    | -    | 60 €/MWh       | accepted | -60 €   |
 
--The total cost for that hour in SPOT MARKET was -610 € =-440-220+50 
+- The total cost for that hour in SPOT MARKET was -610 € =-440-220+50 
 - The total energy reserved was 10 MWh = 8+4-2 
 - The total cost for that hour, including DISPATCH MARKET was -670 €
 

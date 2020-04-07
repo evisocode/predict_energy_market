@@ -11,9 +11,21 @@ Responsible/Contact: data_admin@eviso.it
 
 # Rules and Context
 
-Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SYSTEM.
+Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SPOT MARKET.
 
-**1. RULES FOR EACH BID**
+The SPOT MARKET represents the reservation of energy. No real energy is exchanged here.
+The difference between the real energy produced or consumed by each entity and the energy reserved in SPOT MARKET will be handled by the DISPATCH MARKET that will charge entities for that.
+
+The goals of each entity in the SPOT market are:
+1- forescast its energy consumption or production in order to reserve the correct amount in the SPOT MARKET and minimize cost of the differentce in the DISPATCH MARKET.
+2- reserve the above energy energy at the best possible price by bidding in any of the 8 SUB-MARKETS in the SPOT MARKET.
+3- Addionally or buy making a profit of purchase and sellinf
+
+**CONSUMERS AND PRODUCERS**
+- Both energy producers and consumers make bids in the same SPOT MARKETS.
+- A consumer submits mainly purchase bids but can also submit selling bids if their forecast changed and they bought too much energy.
+
+**RULES FOR EACH BID**
 - submitted for a specific HOUR of a specific DAY
 - include energy QUANTITY (MWh) 
 - include min and max PRICE (€) willing to sell/purchase.
@@ -23,7 +35,7 @@ Authorized ENTITIES can submit BIDs to try to purchase or sell energy in the SYS
 - be submitted inside the Start and End time of the used MARKET
 - ENTITIES can submit multiple BIDs for the same HOUR, MARKET, ZONE and PURPOSE.
 
-**1. ACCEPTANCE OR REFUSAL OF BIDS**
+**ACCEPTANCE OR REFUSAL OF BIDS**
 - For each HOUR, MARKET and ZONE, the SYSTEM will intersect the purchase and sell cumulative curves of all ENTITIES.
 - The PRICE of the BIDS at the intersection defined the AWARDED PRICE
 - All purchase BIDS with BID PRICE above the AWARDED PRICE are accepted, others are refused.
@@ -47,6 +59,8 @@ More details about MARKETS
 - https://www.mercatoelettrico.org/En/Mercati/MercatoElettrico/MPE.aspx
 
 **DEFINITIONS OF ZONES TARGETED IN THIS EXERCISE**
+
+![zone Maps](https://www.researchgate.net/profile/Iea_Pvps2/publication/324727266/figure/fig17/AS:631598269620258@1527596170404/5-2-Market-zones-of-the-Italian-power-system.png)
 
 | **Name** | **Acronym** | **Type of zone** | **Areas included** |
 | --- | --- | --- | --- |

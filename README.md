@@ -41,15 +41,16 @@ The total energy cost for that our can be computed by:
 
 | Market | Bid Quantity  | Bid Price  | Session Price  |  Result  |  Cost  | 
 |:-----:|:--------------:|------------|----------------|----------|--------|
-| MGP   |8 MWh (purchase)| 55 €/MWh   | 50 €/MWh       | accepted | -440 € |
+| MGP   |8 MWh (purchase)| 55 €/MWh   | 50 €/MWh       | accepted | -400 € |
 | MGP   |4 MWh (purchase)| 25 €/MWh   | 50 €/MWh       | refused  | 0 €    |
-| MI1   |4 MWh (purchase)| 35 €/MWh   | 30 €/MWh       | accepted | -220 € |
+| MI1   |4 MWh (purchase)| 35 €/MWh   | 30 €/MWh       | accepted | -120 € |
 | MI6   |2 MWh (sell)    | 10 €/MWh   | 25 €/MWh       | accepted | 50 €   |
-| DISPATCH   |1 MWh (purchase)    | -    | 60 €/MWh       | accepted | -60 €   |
+| DISPATCH   |1 MWh (purchase)    | -    | 60 €/MWh       | accepted | -60 €  |
 
-- The total cost for that hour in SPOT MARKET was -610 € =-440-220+50 
+- The total cost for that hour in SPOT MARKET was -470 € =-400-120+50 
 - The total energy reserved was 10 MWh = 8+4-2 
-- The total cost for that hour, including DISPATCH MARKET was -670 €
+- The total cost for that hour, including DISPATCH MARKET was -530 € 
+- the cost per MWHh was 530/11 = 48,18 €/MWh
 
 **RULES FOR EACH BID**
 - submitted for a specific HOUR of a specific DAY
